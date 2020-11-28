@@ -69,7 +69,7 @@ function Login() {
             </div>
             <div className="input-form">
               <p>
-                <Link to="/password/reset">Forgot password?</Link>
+                <Link to="/reset-password">Forgot password?</Link>
               </p>
             </div>
             <div className="input-form">

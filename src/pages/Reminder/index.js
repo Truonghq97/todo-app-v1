@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ListCategories from "./ListCategories";
-import ListTasks from "./ListTasks";
-import Header from "../Header";
+import ListCategories from "../../components/ListCategories";
+import ListTasks from "../../components/ListTasks";
+import Header from "../../components/Header";
 
 function Reminder() {
   const [data, setData] = useState([
@@ -9,9 +9,9 @@ function Reminder() {
     { id: 2, name: "Planning", listTasks: ["Planning 1", "Planning 2"] },
     { id: 3, name: "Việc nhà", listTasks: ["Việc nhà 1", "Việc nhà 2"] },
   ]);
-  const [filteredCategory, setFilteredCategory] = useState({});
+  const [filteredCategory, setFilteredCategory] = useState({id: 1, name: "Lời nhắc", listTasks: ["Lời nhắc 1", "Lời nhắc 2"]});
   const [isShowListCategories, setIsShowListCategories] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState(1);
 
   useEffect(() => {
     if (localStorage.getItem("data")) {
